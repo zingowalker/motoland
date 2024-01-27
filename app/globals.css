@@ -1,0 +1,135 @@
+html,
+body,
+:root {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .flex-between {
+    justify-content: space-between;
+    display: flex;
+  }
+}
+
+.search-fleet {
+  @apply flex-1 max-sm:w-full flex justify-start items-center;
+}
+
+/* .home__text-container {
+  @apply flex flex-col items-start justify-start gap-y-2.5;
+} */
+
+.home__filters {
+  @apply mt-12 w-full flex-between items-center flex-wrap gap-5;
+}
+
+.home__filter-container {
+  @apply flex justify-start flex-wrap items-center gap-2;
+}
+
+.search-fleet {
+  @apply flex-1 max-sm:w-full flex justify-start items-center;
+}
+
+/* START: searchbar styles */
+.searchbar {
+  @apply flex items-center justify-start max-sm:flex-col w-full relative max-sm:gap-4 max-w-3xl;
+}
+
+.searchbar__item {
+  @apply flex-1 max-sm:w-full flex justify-start items-center relative;
+}
+
+/* .searchbar__input {
+  @apply w-full h-[48px] pl-12 p-4  rounded-r-full max-sm:rounded-full outline-none cursor-pointer text-sm;
+} */
+
+/* START: search manufacturer styles */
+/* .search-fleet {
+  @apply flex-1 max-sm:w-full flex justify-start items-center;
+} */
+
+/* .search-fleet__input {
+  @apply w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full text-sm;
+} */
+
+/* START: Car Card styles */
+.bike-card {
+  @apply flex flex-col p-6 justify-center items-start  rounded-3xl;
+}
+
+.bike-card__content {
+  @apply w-full flex justify-between items-start gap-2;
+}
+
+.bike-card__content-title {
+  @apply text-[22px] leading-[26px] font-bold capitalize;
+}
+
+.bike-card__icon {
+  @apply flex flex-col justify-center items-center gap-2;
+}
+
+.bike-card__btn-container {
+  @apply hidden group-hover:flex absolute bottom-0 w-full z-10;
+}
+
+/* START: searchbar styles */
+
+.searchbar__item {
+  @apply flex-1 max-sm:w-full flex justify-start items-center relative;
+}
