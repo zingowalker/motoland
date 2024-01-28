@@ -38,8 +38,8 @@ const SearchManufacturer = ({
           <Combobox.Input
             className="w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full text-sm outline-none bg-gray-100 cursor-pointer"
             displayValue={(item: string) => item}
-            onChange={(event) => setQuery(event.target.value)} // Update the search query when the input changes
-            placeholder="Enfield, Tvs, Bajaj"
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Enfield"
           />
 
           <Transition
@@ -58,7 +58,7 @@ const SearchManufacturer = ({
                   value={query}
                   className="cursor-default select-none py-2 pl-10 pr-4"
                 >
-                  Create
+                  Create '{query}'
                 </Combobox.Option>
               ) : (
                 filteredManufacturers.map((item) => (
